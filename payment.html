@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+    }
+    .payment-container {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #27ae60;
+    }
+    .amount {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+    button {
+      padding: 12px 20px;
+      background: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #1e8449;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <h2>💳 Payment</h2>
+    <div class="amount">Total Amount: ₹<span id="amount">0</span></div>
+    <button onclick="payNow()">Pay Now</button>
+  </div>
+
+  <script>
+    const amount = localStorage.getItem("totalAmount") || "0";
+    document.getElementById("amount").textContent = amount;
+
+    function payNow() {
+      alert("✅ Payment Successful!");
+      window.location.href = "thank-you.html";
+    }
+  </script>
+</body>
+</html>

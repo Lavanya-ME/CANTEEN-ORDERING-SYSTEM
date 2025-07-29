@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canteen Ordering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🍽️ Canteen Order</h1>
+    <form id="order-form">
+      <input type="text" name="name" placeholder="👤 Your Name" required class="name-input">
+       <div class="item">
+        <input type="checkbox" id="item-Burger">
+        <label for="item-Burger" class="item-label">🍔 Burger</label>
+        <input type="number" id="qty-Burger" min="1" value="1" disabled>
+      </div>
+      <div class="item">
+        <input type="checkbox" id="item-Sandwich">
+        <label for="item-Sandwich" class="item-label">🥪 Sandwich</label>
+        <input type="number" id="qty-Sandwich" min="1" value="1" disabled>
+      </div>
+      <div class="item">
+        <input type="checkbox" id="item-Tea">
+        <label for="item-Tea" class="item-label">🍵 Tea</label>
+        <input type="number" id="qty-Tea" min="1" value="1" disabled>
+      </div>
+      <div class="item">
+        <input type="checkbox" id="item-Juice">
+        <label for="item-Juice" class="item-label">🧃 Juice</label>
+        <input type="number" id="qty-Juice" min="1" value="1" disabled>
+      </div>
+       <div class="summary">
+        <strong>Order Summary:</strong>
+        <div id="summary-details">No items selected.</div>
+        <p>Total Price: ₹<span id="summary-total">0</span></p>
+      </div>
+    <button type="submit">🛒 Place Order</button>
+    </form>
+  </div>
+           <script src="script.js"></script>
+</body>
+</html>
